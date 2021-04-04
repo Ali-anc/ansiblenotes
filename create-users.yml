@@ -20,7 +20,7 @@
      # loop:
       # - alice
       # - vincent
-    - name: Create a 2048-bit SSH key for user jsmith in ~jsmith/.ssh/id_rsa
+    - name: Create a 2048-bit SSH key for user in ~user/.ssh/id_rsa
       ansible.builtin.user:
         name: "{{ user }}" 
         generate_ssh_key: yes
@@ -29,8 +29,9 @@
         
     - name: Copy .ssh/id_rsa.pub >> .ssh/authorized_keys
       ansible.builtin.copy:
-        src: .ssh/id_rsa.pub 
-        dest: .ssh/authorized_keys
+        name: "{{ user }}" 
+        src: "{{ user }}"/.ssh/id_rsa.pub 
+        dest: "{{ user }}"/.ssh/authorized_keys
         owner: "{{ user }}" 
         group: "{{ user }}" 
         mode: '0700'
