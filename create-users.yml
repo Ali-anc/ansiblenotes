@@ -26,14 +26,14 @@
         generate_ssh_key: yes
         ssh_key_bits: 2048
         ssh_key_file: .ssh/id_rsa
-        shell: "cat '{{ user }}' .ssh-id_rsa.pub >> ~/.ssh/authorized_keys"
+       # shell: "cat '{{ user }}' .ssh-id_rsa.pub >> ~/.ssh/authorized_keys"
         
-#    - name: Copy .ssh/id_rsa.pub >> .ssh/authorized_keys
-#      ansible.builtin.copy:
-#        name: "{{ user }}" 
-#        src: "{{ user }}"
-#        dest: .ssh/authorized_keys
-#        remote_src: yes
-#        owner: "{{ user }}" 
-#        group: "{{ user }}" 
-#        mode: '0700'
+    - name: Copy .ssh/id_rsa.pub >> .ssh/authorized_keys
+      ansible.builtin.copy:
+       # name: "{{ user }}" 
+        src: .ssh/id_rsa
+        dest: .ssh/authorized_keys
+        remote_src: yes
+        owner: "{{ user }}" 
+        group: "{{ user }}" 
+        mode: '0700'
