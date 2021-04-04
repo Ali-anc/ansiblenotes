@@ -18,5 +18,5 @@
         shell: /bin/bash
         #update_password: on_create    #to avoid updating password hash in /etc/shadow
      # loop:
-        - alice
-        - vincent
+      # - alice
+      # - vincent
