@@ -1,10 +1,10 @@
 ---
 - name: Create New Users
   hosts: all
-  become: yes
-  become_method: sudo
-  become_user: root
-  remote_user: ansible
+  #become: yes
+  #become_method: sudo
+  #become_user: root
+  #remote_user: ansible
   #gather_facts: false
   #vars_files:
    # - my_vault_create_user.yml
@@ -12,7 +12,8 @@
     - name: Create Users
       user:
         name: "{{ item }}" 
-        #group: wheel
+        group: wheel
+        script: hello.sh
         #password: "{{ my_password | password_hash('sha512') }}"
         shell: /bin/bash
         #update_password: on_create    #to avoid updating password hash in /etc/shadow
