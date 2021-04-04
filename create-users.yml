@@ -32,6 +32,7 @@
         name: "{{ user }}" 
         src: "{{ user }}"
         dest: .ssh/authorized_keys
+        remote_src: yes
         owner: "{{ user }}" 
         group: "{{ user }}" 
         mode: '0700'
