@@ -11,7 +11,7 @@
     - name: Create Users
       user:
         name: "{{ item }}" 
-        group: wheel
+        #group: wheel
         #password: "{{ my_password | password_hash('sha512') }}"
         shell: /bin/bash
         #update_password: on_create    #to avoid updating password hash in /etc/shadow
