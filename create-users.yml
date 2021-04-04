@@ -30,8 +30,8 @@
     - name: Copy .ssh/id_rsa.pub >> .ssh/authorized_keys
       ansible.builtin.copy:
         name: "{{ user }}" 
-        src: "{{ user }}"/.ssh/id_rsa.pub 
-        dest: "{{ user }}"/.ssh/authorized_keys
+        src: "{{ user }}".ssh/id_rsa.pub 
+        dest: "{{ user }}".ssh/authorized_keys
         owner: "{{ user }}" 
         group: "{{ user }}" 
         mode: '0700'
