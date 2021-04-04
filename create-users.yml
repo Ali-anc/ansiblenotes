@@ -4,6 +4,7 @@
   become: yes
   become_method: sudo
   become_user: root
+  remote_user = ansible
   #gather_facts: false
   #vars_files:
    # - my_vault_create_user.yml
