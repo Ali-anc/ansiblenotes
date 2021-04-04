@@ -29,7 +29,7 @@
         
     - name: Copy .ssh/id_rsa.pub >> .ssh/authorized_keys
       ansible.builtin.copy:
-        src: "{{ user }}"/.ssh/id_rsa.pub 
+        src: "{{ user }}".ssh/id_rsa.pub 
         dest: "{{ user }}"/.ssh/authorized_keys
         owner: "{{ user }}" 
         group: "{{ user }}" 
