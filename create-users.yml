@@ -12,7 +12,7 @@
     - name: Create Users
       user:
         name: "{{ item }}"  
-        group: wheel
+        groups: wheel
         #script: hello.sh
         #password: "{{ my_password | password_hash('sha512') }}"
         shell: /bin/bash
