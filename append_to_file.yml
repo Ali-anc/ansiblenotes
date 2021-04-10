@@ -1,12 +1,14 @@
 ---
-- name: add external bash script
   hosts: all 
-  blockinfile:        # insert multiple line to file using 'blockinfile'
-    state: present
-    insertafter: EOF
-    dest: /etc/test/file
-    marker: "<!-- add script ANSIBLE MANAGED BLOCK -->"
-    content: |
-      gfdgfdgfd
-      lggfdggdfg
-      gfdgdfgdfgdfgfdgfdgfdgfdgdffdgline 3
+  
+  tasks:
+  - name: add external bash script
+    blockinfile:        # insert multiple line to file using 'blockinfile'
+      state: present
+      insertafter: EOF
+      dest: /etc/test/file
+      marker: "<!-- add script ANSIBLE MANAGED BLOCK -->"
+      content: |
+        gfdgfdgfd
+        lggfdggdfg
+        gfdgdfgdfgdfgfdgfdgfdgfdgdffdgline 3
