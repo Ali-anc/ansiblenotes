@@ -1,5 +1,5 @@
 ---
-#- name: add external bash script
+#working content
 - hosts: all 
   tasks:
   - name: add external bash script
