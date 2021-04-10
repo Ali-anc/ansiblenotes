@@ -1,6 +1,6 @@
 ---
 - name: add external bash script
-  host: all 
+  hosts: all 
   blockinfile:        # insert multiple line to file using 'blockinfile'
     state: present
     insertafter: EOF
