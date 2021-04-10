@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  become_user: root
+  tasks:
+  - name: Changing Maxconnection number
+    ansible.builtin.lineinfile:
+      path: /usr/lib/systemd/system/telnet.socket
+      regexp: '^MaxConnections='
+      line: "{{ num }}"
