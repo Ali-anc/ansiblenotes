@@ -1,7 +1,7 @@
 ---
 - name: add external bash scipt
  host: all 
-  blockinfile: 
+  blockinfile:        # insert multiple line to file using 'blockinfile'
     state: present
     insertafter: EOF
     dest: /etc/test/file
