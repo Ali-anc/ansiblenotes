@@ -1,0 +1,9 @@
+---
+- hosts: all 
+  #become: true
+  #remote_user: tony
+  tasks:
+    - name: create a file
+      file:
+        path: /tmp/file-test-playbook-1
+        state: touch
