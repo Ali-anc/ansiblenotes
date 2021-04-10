@@ -1,6 +1,5 @@
 ---
   hosts: all 
-  
   tasks:
   - name: add external bash script
     blockinfile:        # insert multiple line to file using 'blockinfile'
