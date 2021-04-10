@@ -8,7 +8,23 @@
       insertafter: EOF
       dest: /etc/test/file
       marker: "# {mark} ANSIBLE MANAGED BLOCK {{ content }}"
-      #content: |
-        #gfdgfdgfd
-        #lggfdggdfg
-        #gfdgdfgdfgdfgfdgfdgfdgfdgdffdgline 3
+      content: |
+        # Not running bash?
+        [ -n "$BASH_VERSION" ] || return 0 
+
+        # Not an interactive shell?   
+        [[ $- == *i* ]] || return 0  
+
+        if [ "$BASH" ]; then
+        export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
+        export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo "`date +'%y.%m.%d-%H:%M:%S:'`" $USER "("$ORIGINAL_USER")" "COMMAND: " "$(history 1 | cut -c8-)" >> /var/log/bash_eternal_history'
+        alias ehistory='cat /var/log/bash_eternal_history'
+        readonly PROMPT_COMMAND
+        readonly HISTSIZE
+        readonly HISTFILE
+        readonly HOME
+        readonly HISTIGNORE
+        readonly HISTCONTROL
+        fi
+
+    
