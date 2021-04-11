@@ -7,5 +7,5 @@
         attr: +a
     	state: directory
     	owner: root
-	group: root
+        group: root
     	mode:  0777
