@@ -7,19 +7,12 @@
       file:
         path: /tmp/ali/
         state: directory 
-      #file: 
-        #path: /tmp/file-test-playbook-1
-        #state: touch
+  tasks:
+    - name: create a file
+      file:
+        path: /tmp/file-test-playbook-1
+        state: touch
         #state: directory
-        #owner: root
-        #group: root
-        #mode: 0777 
-  #tasks:
-    #- name: create a file
-     # file:
-        #path: /tmp/file-test-playbook-1
-        #state: touch
-        #state: directory
-        #owner: root
-        #group: root
-        #mode: 0777 
+        owner: root
+        group: root
+        mode: 0777 
