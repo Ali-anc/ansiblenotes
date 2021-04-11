@@ -6,13 +6,20 @@
     - name: create a folder
       file:
         path: /tmp/ali/
-        state: persent 
-  tasks:
-    - name: create a file
-      file:
+        state: directory 
+      file: 
         path: /tmp/file-test-playbook-1
         state: touch
         #state: directory
         owner: root
         group: root
         mode: 0777 
+  #tasks:
+    #- name: create a file
+     # file:
+        #path: /tmp/file-test-playbook-1
+        #state: touch
+        #state: directory
+        #owner: root
+        #group: root
+        #mode: 0777 
