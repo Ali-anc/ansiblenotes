@@ -6,7 +6,7 @@
     - name: create a folder
       file:
         path: /tmp/ali/
-        state: prsent
+        state: persent
         
   tasks:
     - name: create a file
