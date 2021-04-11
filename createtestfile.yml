@@ -5,7 +5,7 @@
   tasks:
     - name: create a folder
       file:
-        path: /tmp/ali/file-test-playbook-1
+        path: /tmp/ali/
         state: directory
         
   tasks:
