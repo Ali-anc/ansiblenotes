@@ -5,7 +5,7 @@
   tasks:
     - name: create a file
       file:
-        path: /tmp/ali/file-test-playbook-1
+        path: /tmp/file-test-playbook-1
         state: touch
         #state: directory
         owner: root
