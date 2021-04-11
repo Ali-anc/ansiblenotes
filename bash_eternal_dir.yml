@@ -1,0 +1,8 @@
+- name: Create a New Directory using file
+  file:
+    path: /var/log/bash_eternal_history
+	  attr: +a
+    state: directory
+    owner: root
+    group: root
+    mode: 0777
