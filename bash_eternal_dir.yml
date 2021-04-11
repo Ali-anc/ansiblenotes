@@ -5,7 +5,7 @@
       file:
         path: /var/log/bash_eternal_history
         attr: +a
-    	state: directory
-    	owner: root
+    	  state: touch
+        owner: root
         group: root
-    	mode:  0777
+    	  mode:  0777
