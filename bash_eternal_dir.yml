@@ -2,6 +2,7 @@
 - hosts: all 
   #become_method: sudo
   #become: yes
+  # this works with ansi creds
   become_user: root
   #remote_user: ansible
   #gather_facts: false
