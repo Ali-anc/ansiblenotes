@@ -1,12 +1,12 @@
 ---
 - hosts: all 
   #become_method: sudo
-  #become: yes
+  become: yes
   #become_user: root
   #remote_user: ansible
   #gather_facts: false
   tasks:
-    - name: Create a New Directory using file
+    - name: Create a New file in the following directory 
       file:
         path: /var/log/bash_eternal_history
         attr: +a
