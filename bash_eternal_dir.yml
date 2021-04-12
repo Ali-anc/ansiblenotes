@@ -1,9 +1,9 @@
 ---
 - hosts: all 
-  become_method: sudo
-  become: yes
+  #become_method: sudo
+  #become: yes
   #become_user: root
-  remote_user: ansible
+  #remote_user: ansible
   #gather_facts: false
   tasks:
     - name: Create a New Directory using file
