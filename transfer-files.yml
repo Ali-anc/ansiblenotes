@@ -7,4 +7,4 @@
       synchronize:
         src: /home/{{ user }}/.ssh/id_rsa
         dest: /home/{{ user }}/.ssh/id_rsa
-      delegate_to: linux2
+      delegate_to: 192.168.50.31 
