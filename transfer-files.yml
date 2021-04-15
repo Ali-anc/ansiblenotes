@@ -3,6 +3,6 @@
   tasks:
     - name: Transfer file from devops-box (linux2) to linux101 (linux2)
       synchronize:
-        src: /home/{{ userfrom }}/.ssh/id_rsa
-        dest: /home/{{ userto }}/.ssh/id_rsa
+        src: /home/{{ user }}/.ssh/id_rsa
+        dest: /home/{{ user }}/.ssh/id_rsa
       delegate_to: linux2
