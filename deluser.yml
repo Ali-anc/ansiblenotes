@@ -6,4 +6,4 @@
       user:
         name: "{{ user }}"
         state: absent
-        #remove: true
+        remove: true  #it attempts to remove directories associated with the user. uncomment this if you want to remove the dir as well
