@@ -14,8 +14,10 @@
       user:
         name: "{{ user }}"
         password: "{{ password }}"
+        # python3 -c 'import crypt,getpass;pw=getpass.getpass();print(crypt.crypt(pw) if (pw==getpass.getpass("Confirm: ")) else exit())
         groups: wheel
         #script: hello.sh
         #password: "{{ my_password | password_hash('sha512') }}"
         shell: /bin/bash
         #update_password: on_create    #to avoid updating password hash in /etc/shadow
+    
