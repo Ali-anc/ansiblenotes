@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Delete Users
+      user:
+        name: "{{ user }}"
+        state: absent
+        remove: true
