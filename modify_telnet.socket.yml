@@ -5,7 +5,7 @@
   become_user: root
   tasks:
   - name: Changing Maxconnection number
-    ansible.builtin.lineinfile:
+    ansible.builtin.lineinfile: # lineinfile - Ensure a particular line is in a file, or replace an existing line using a back-referenced regular expression
       path: /usr/lib/systemd/system/telnet.socket
       regexp: '^MaxConnections='
       line: "{{ num }}"
