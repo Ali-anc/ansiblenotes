@@ -27,3 +27,11 @@
         fi
 
     
+  - name: Create a bash_eternal_history file in the following directory 
+    file:
+      path: /var/log/bash_eternal_history
+      attr: +a
+      state: touch
+      owner: root
+      group: root
+      mode:  0777
