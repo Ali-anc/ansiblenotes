@@ -6,7 +6,7 @@
     blockinfile:        # insert multiple line to file using 'blockinfile'
       state: present
       insertafter: EOF
-      dest: /etc/test/file
+      dest: /etc/bashrc
       marker: "# {mark} ANSIBLE MANAGED BLOCK"
       content: |
         # Not running bash?
