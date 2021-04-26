@@ -9,3 +9,9 @@
       path: /usr/lib/systemd/system/telnet.socket
       regexp: '^MaxConnections='
       line: "{{ num }}"
+  
+  - name: Restart service telnet.socket on host, in all cases, also issue daemon-reload to pick up config changes
+    ansible.builtin.systemd:
+      state: restarted
+      daemon_reload: yes
+      name: telnet.socket
