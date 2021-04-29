@@ -1,0 +1,9 @@
+---
+- hosts: all 
+  gather_facts: true
+  become_user: root
+  tasks:
+    - name: create a test file
+      file:
+        path: /tmp/file-test-playbook-1
+        state: absent
