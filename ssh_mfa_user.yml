@@ -2,25 +2,13 @@
 - hosts: all 
   become_user: root
   tasks:
-  - name: add external bash script
+  - name: prompt user for google-authenticator
     blockinfile:        # insert multiple line to file using 'blockinfile'
       state: present
       insertafter: EOF
-      dest: /etc/bashrc
+      dest: |
+         /home/moe/.bash_profile
       marker: "# {mark} ANSIBLE MANAGED BLOCK"
       content: |
         # Not running bash?
-        [ -n "$BASH_VERSION" ] || return 0 
-        # Not an interactive shell?   
-        [[ $- == *i* ]] || return 0  
-        if [ "$BASH" ]; then
-        export HISTTIMEFORMAT="%Y-%m-%d_%H:%M:%S "
-        export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ; }"'echo "`date +'%y.%m.%d-%H:%M:%S:'`" $USER "("$ORIGINAL_USER")" "COMMAND: " "$(history 1 | cut -c8-)" >> /var/log/bash_eternal_history'
-        alias ehistory='cat /var/log/bash_eternal_history'
-        readonly PROMPT_COMMAND
-        readonly HISTSIZE
-        readonly HISTFILE
-        readonly HOME
-        readonly HISTIGNORE
-        readonly HISTCONTROL
-        fi
+        google-authenticator -t -d -f -r 3 -R 30 -W
