@@ -3,9 +3,11 @@
   become_user: root
   tasks:
   - name: prompt user for google-authenticator
-    lineinfile: dest=/home/{{ item }/.bash_profile
+    lineinfile: 
+      linsertafter: EOF 
+      path: /home/{{ item }/.bash_profile
     with_items:
       - user1
       - user2
       - user3
-       line: google-authenticator -t -d -f -r 3 -R 30 -W
+      line: google-authenticator -t -d -f -r 3 -R 30 -W
