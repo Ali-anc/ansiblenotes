@@ -7,7 +7,7 @@
       state: present
       insertafter: EOF
       dest: |
-         /etc/bashrc
+       /etc/bashrc
       marker: "# {mark} ANSIBLE MANAGED BLOCK"
       content: |
         # Not running bash?
