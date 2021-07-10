@@ -11,7 +11,7 @@
       - /home/user1/.bash_profile
       - /home/user2/.bash_profile
       - /home/user3/.bash_profile
-      marker: "# {mark} ANSIBLE MANAGED BLOCK"
+       marker: "# {mark} ANSIBLE MANAGED BLOCK"
       content: |
         # Not running bash?
         google-authenticator -t -d -f -r 3 -R 30 -W
