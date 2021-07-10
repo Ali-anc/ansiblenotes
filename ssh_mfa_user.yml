@@ -6,10 +6,11 @@
     blockinfile:        # insert multiple line to file using 'blockinfile'
       state: present
       insertafter: EOF
-      path: /home/moe/.bash_profile
-      path: /home/user1/.bash_profile
-      path: /home/user2/.bash_profile
-      path: /home/user3/.bash_profile
+      path: "An item: {{ item }}"
+    with_items:
+      - /home/user1/.bash_profile
+      - /home/user2/.bash_profile
+      - /home/user3/.bash_profile
       marker: "# {mark} ANSIBLE MANAGED BLOCK"
       content: |
         # Not running bash?
