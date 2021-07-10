@@ -8,4 +8,4 @@
       - user1
       - user2
       - user3
-      line: google-authenticator -t -d -f -r 3 -R 30 -W
+       line: google-authenticator -t -d -f -r 3 -R 30 -W
