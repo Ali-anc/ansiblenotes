@@ -3,7 +3,7 @@
   become_user: root
   tasks:
   - name: prompt user for google-authenticator
-    lineinfile: 
+    blockinfile: 
       insertafter: EOF
       line: google-authenticator -t -d -f -r 3 -R 30 -W
       marker: "# {mark} ANSIBLE MANAGED BLOCK"
