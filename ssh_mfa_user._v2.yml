@@ -5,7 +5,7 @@
   - name: prompt user for google-authenticator
     lineinfile: 
       linsertafter: EOF 
-      path: /home/{{ item }/.bash_profile
+      path: /home/{{ item }}/.bash_profile
     with_items:
       - user1
       - user2
