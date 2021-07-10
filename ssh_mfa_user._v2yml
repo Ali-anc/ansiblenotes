@@ -10,4 +10,3 @@
        - user3
        marker: "# {mark} ANSIBLE MANAGED BLOCK"
        line: google-authenticator -t -d -f -r 3 -R 30 -W
-   
