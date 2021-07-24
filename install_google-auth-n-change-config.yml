@@ -1,0 +1,25 @@
+---
+- hosts: all 
+  become_user: root
+  tasks:
+  - name: Add epel-release repo
+	  yum:
+      name: epel-release
+      state: present
+
+  - name: install google-authenticator
+    yum:
+      name: google-authenticator
+      state: present # installs the google-authenticator.service
+	  
+  - name: edit /etc/pam.d/sshd
+    lineinfile: 
+      insertafter: EOF
+      line: auth       required     pam_google_authenticator.so nullok
+      path: /etc/pam.d/sshd
+	    
+  - name: edit /etc/ssh/sshd_config
+    lineinfile: 
+      insertafter: EOF
+      line: AuthenticationMethods password publickey keyboard-interactive
+      path: /etc/ssh/sshd_config
