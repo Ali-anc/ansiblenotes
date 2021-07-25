@@ -3,9 +3,9 @@
   become_user: root
   tasks:
   - name: edit /etc/ssh/sshd_config
-	  lineinfile:
-	    path: /etc/ssh/sshd_config
-	    regexp: '^#PermitRootLogin yes'
-	    insertafter: '^#PermitRootLogin yes '
-	    line: 'PermitRootLogin no'
-	    validate: '/etc/ssh/sshd_config -cf %
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^#PermitRootLogin yes'
+      insertafter: '^#PermitRootLogin yes '
+      line: 'PermitRootLogin no'
+      validate: '/etc/ssh/sshd_config -cf %
