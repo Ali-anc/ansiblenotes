@@ -8,4 +8,4 @@
       regexp: '^#PermitRootLogin yes'
       insertafter: '^#PermitRootLogin yes '
       line: 'PermitRootLogin no'
-      validate: '/etc/ssh/sshd_config -cf %
+      validate: '/etc/ssh/sshd_config -cf %s'
