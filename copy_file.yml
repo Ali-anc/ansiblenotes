@@ -4,6 +4,6 @@
   tasks:
   - name: prompt user for google-authenticator
     copy:
-      src: /home/achad/.google_authenticator
-      dest: /home/achad/.google_authenticator
+      src: /home/achad/alirandom
+      dest: /home/achad/alirandom
       remote_src: true
