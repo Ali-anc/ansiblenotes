@@ -6,3 +6,4 @@
     copy:
       src: /tmp/testfile
       dest: /home/achad
+      remote_src: true 
