@@ -2,8 +2,7 @@
 - hosts: all 
   become_user: root
   tasks:
-  - name: prompt user for google-authenticator
+  - name: test transfer
     copy:
-      src: /home/achad/alirandom
-      dest: /home/achad/alirandom
-      remote_src: true
+      src: /tmp/testfile
+      dest: /home/achad
