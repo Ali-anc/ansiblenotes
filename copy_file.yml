@@ -1,0 +1,10 @@
+---
+- hosts: all 
+  become_user: root
+  tasks:
+  - name: prompt user for google-authenticator
+  	copy:
+	    src: /home/{{ item }}/.google-authenticator
+	    dest: /home/{{ item }}/.google-authenticator
+	  with_items: 
+	    - achad
