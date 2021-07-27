@@ -4,8 +4,6 @@
   tasks:
   - name: prompt user for google-authenticator
     copy:
-      src: /home/{{ item }}/.google_authenticator
-      dest: /home/{{ item }}/.google_authenticator
+      src: /home/achad/.google_authenticator
+      dest: /home/achad/.google_authenticator
       remote_src: true
-    with_items: 
-      - achad
