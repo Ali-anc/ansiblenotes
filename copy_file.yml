@@ -4,6 +4,6 @@
   tasks:
   - name: test transfer
     copy:
-      src: tmp/testfile
+      src: /var/lib/awx/projects/tmp/testfile
       dest: /home/achad
       remote_src: true 
