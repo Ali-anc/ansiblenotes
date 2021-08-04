@@ -4,7 +4,7 @@
   tasks:
   - name: test transfer
     copy:
-      src: testfile
+      src: /tmp/testfile
       dest: /home/achad
       remote_src: yes
       owner: achad
