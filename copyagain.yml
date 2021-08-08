@@ -7,8 +7,8 @@
       src: /tmp/testfile
       dest: /home/achad
       remote_src: yes
-	  when: "{{ inventory_hostname == 'devops-machine' }}"
+      when: "{{ inventory_hostname == 'devops-machine' }}"
       owner: achad
       group: achad
       mode: '0644'
-	delegate_to: all
+    delegate_to: all
