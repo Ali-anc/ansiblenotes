@@ -6,6 +6,7 @@
     copy:
       src: /tmp/testfile
       dest: /home/achad
+      remote_src: no
       owner: achad
       group: achad
       mode: '0644'
