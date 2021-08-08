@@ -7,7 +7,7 @@
       src: /tmp/testfile
       dest: /home/achad
       remote_src: yes
-      when: "{{ inventory_hostname == 'devops-machine' }}"
+      when: "{{ inventory_hostname == 'linux1' }}"
       owner: achad
       group: achad
       mode: '0644'
