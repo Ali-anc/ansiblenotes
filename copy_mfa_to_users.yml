@@ -2,10 +2,10 @@
 - hosts: all 
   become_user: root
   tasks:
-  - name: test transfer
+  - name: copy mfa file to user
     copy:
-      src: /var/lib/awx/projects/tmp/testfile
-      dest: /home/achad
+      src: /var/lib/awx/projects/tmp/achad_.auth
+      dest: /home/achad/.google_authenticator
       owner: achad
       group: achad
-      mode: '0644'
+      mode: '0400'
