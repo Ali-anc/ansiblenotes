@@ -20,3 +20,11 @@
       insertafter: EOF
       line: AuthenticationMethods password publickey keyboard-interactive
       path: /etc/ssh/sshd_config
+  - name: edit /etc/ssh/sshd_config
+    lineinfile:
+      path: /etc/ssh/sshd_config
+      state: present
+      regexp: '^#ChallengeResponseAuthentication no'
+      insertafter: '^#ChallengeResponseAuthentication no'
+      line: 'ChallengeResponseAuthentication yes'
+      validate: '/usr/sbin/sshd -T -f %s'
