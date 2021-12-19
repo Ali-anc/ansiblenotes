@@ -28,3 +28,7 @@
       insertafter: '^#ChallengeResponseAuthentication no'
       line: 'ChallengeResponseAuthentication yes'
       validate: '/usr/sbin/sshd -T -f %s'
+  - name: restart sshd
+    service: 
+      name: sshd
+      state: restarted    
