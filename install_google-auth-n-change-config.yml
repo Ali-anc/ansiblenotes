@@ -26,7 +26,7 @@
       regexp: '^#ChallengeResponseAuthentication no'
       insertafter: '^#ChallengeResponseAuthentication no'
       line: 'ChallengeResponseAuthentication yes'
-	    line: 'ChallengeResponseAuthentication no'
+      line: 'ChallengeResponseAuthentication no'
       validate: '/usr/sbin/sshd -T -f %s'
   - name: restart sshd
     service: 
