@@ -23,10 +23,10 @@
   - name: edit /etc/ssh/sshd_config
     lineinfile:
       path: /etc/ssh/sshd_config
-      regexp: '^#ChallengeResponseAuthentication no'
-      insertafter: '^#ChallengeResponseAuthentication no'
+      regexp: '^ChallengeResponseAuthentication no'
+      insertafter: '^ChallengeResponseAuthentication no'
       line: 'ChallengeResponseAuthentication yes'
-      line: 'ChallengeResponseAuthentication no'
+      line: '#ChallengeResponseAuthentication no'
       validate: '/usr/sbin/sshd -T -f %s'
   - name: restart sshd
     service: 
