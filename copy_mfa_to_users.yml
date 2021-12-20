@@ -4,7 +4,7 @@
   tasks:
   - name: copy mfa file to user
     copy:
-      src: /var/lib/awx/projects/tmp/achad_.auth
+      src: /var/lib/awx/projects/tmp/achad
       dest: /home/achad/.google_authenticator
       owner: achad
       group: achad
