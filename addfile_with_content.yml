@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become_user: root
+  tasks:
+  - name: Ansible create file with content example
+    copy:
+      dest: "/home/achad/.google_authenticator"
+      owner: achad
+      group: achad
+      mode: '0400'
+      content: |
+        5PDRDL7O6TNODBAFHJCYPROTIQ
+        " RATE_LIMIT 3 30 1639087545
+        " WINDOW_SIZE 3
+        " TOTP_AUTH
+        51607360
+        53979535
+        91396147
+        41548814
+        16810374
+        72833518
+        16960873
+        75299111
+        92942660
+        46372923
